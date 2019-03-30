@@ -1,0 +1,14 @@
+{
+  "name": "ProjectEuler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/IrieY56/Project-Euler.git",
+  "author": "IrieY56 <IrieY56@gmail.com>",
+  "license": "GNU",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
