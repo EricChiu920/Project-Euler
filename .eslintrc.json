@@ -1,6 +1,6 @@
 {
     "extends": "airbnb",
     "rules": {
-        "max-len": [0, { "ignoreComments": true }]
+        "max-len": [2, { "ignoreComments": true }]
     }
 }
