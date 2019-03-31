@@ -1,4 +1,3 @@
-const { performance } = require('perf_hooks');
 // Largest palindrome product
 
 // A palindromic number reads the same both ways.The largest palindrome made from the product of two 2 - digit numbers is 9009 = 91 × 99.
@@ -39,6 +38,8 @@ function largestPalindromeProduct(num = 3) {
   return big;
 }
 console.log(largestPalindromeProduct());
+
+// const { performance } = require('perf_hooks');
 
 // const runs = 100;
 
