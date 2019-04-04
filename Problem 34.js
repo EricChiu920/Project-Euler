@@ -17,13 +17,12 @@ function digitFactorials() {
   const factorials = [1];
   let sum = 0;
 
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < 10; i += 1) { // Get the result of factorials for digits 0 through 9.
     factorials.push(factorials[i - 1] * i);
   }
 
   for (let i = 10; i < 100000; i += 1) {
     if (getFactorialSum(i, factorials) === i) {
-      console.log(i);
       sum += i;
     }
   }
