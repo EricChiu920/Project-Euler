@@ -1,26 +1,31 @@
 module.exports = {
+  // Receives a number to check if it is a prime
   isPrime: function isPrime(num) {
-    if (num <= 1) {
-      return false;
-    } if (num <= 3) {
-      return true;
-    } if (num % 2 === 0 || num % 3 === 0) {
+    if (Number.isNaN(num) || !Number.isFinite(num) || num % 1 || num < 2) {
       return false;
     }
+    if (num % 2 === 0) {
+      return num === 2;
+    }
+    if (num % 3 === 0) {
+      return num === 3;
+    }
 
-    let i = 5;
-    const n = Math.floor(Math.sqrt(num));
-
-    while (i <= n) {
-      if (num % i === 0 || num % (i + 2) === 0) {
+    const n = Math.sqrt(num);
+    for (let i = 5; i <= n; i += 6) {
+      if (num % i === 0) {
         return false;
       }
-      i += 6;
+
+      if (num % (i + 2) === 0) {
+        return false;
+      }
     }
 
     return true;
-  },
+  }, // Returns true if the number is a prime, false otherwise.
 
+  // Receives a number which is the amount upper range of the numbers to check if it is a prime
   primeSeive: function primeSeive(num) {
     const primes = [];
     const upperLimit = Math.sqrt(num);
@@ -38,5 +43,5 @@ module.exports = {
     }
 
     return primes;
-  },
+  }, // Returns a array which contains true for the index of prime numbers
 };
